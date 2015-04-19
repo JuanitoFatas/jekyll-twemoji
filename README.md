@@ -10,7 +10,7 @@ Twemoji plugin for Jekyll in Pure Ruby. Powered by [Twemoji](https://github.com/
 Add this in your jekyll-powered site's `Gemfile`:
 
 ```
-gem "jekyll-emoji"
+gem "jekyll-twemoji"
 ```
 And then execute:
 
@@ -22,7 +22,7 @@ Then add this to your site's `_config.yml`:
 
 ```yml
 gems:
-  - jekyll-emoji
+  - jekyll/twemoji
 ```
 
 Use Twemoji like you aways do:

@@ -38,7 +38,7 @@ Note that in Twemoji, a :+1: is called `:thumbsup:`, not `:+1:`.
 ### Image Type
 
 Defaults to `svg`. To change to png, you need to supply `image_type` and
-`image_size` both:
+`image_size` **both**:
 
 ```
 jekyll-twemoji:
@@ -46,8 +46,8 @@ jekyll-twemoji:
   image_size: "32x32" # defaults to "16x16"
 ```
 
-**image_type** can be: `"png"` or `"svg"` (default).
-**image_size** can be: `"16x16"` (default), `"16x16"` or `"72x72"`.
+- **image_type** can be: `"png"` or `"svg"` (default).
+- **image_size** can be: `"16x16"` (default), `"16x16"` or `"72x72"`.
 
 That's it. :wink:
 

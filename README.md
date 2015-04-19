@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/JuanitoFatas/jekyll-twemoji.svg?style=flat-square)](https://travis-ci.org/JuanitoFatas/jekyll-twemoji)
 [![Gem Version](https://img.shields.io/gem/v/jekyll-twemoji.svg?style=flat-square)](https://rubygems.org/gems/jekyll-twemoji)
 
-Twemoji plugin for Jekyll in Pure Ruby.
+Twemoji plugin for Jekyll in Pure Ruby. Powered by [Twemoji](https://github.com/jollygoodcode/twemoji).
 
 ## Installation
 
@@ -33,18 +33,27 @@ I give this plugin :thumbsup:!
 
 Note that in Twemoji, a :+1: is called `:thumbsup:`, not `:+1:`.
 
-## Attribution Requirements
-
-Please follow the [Attribution Requirements](https://github.com/twitter/twemoji#attribution-requirements) as stated on the official [Twemoji](https://github.com/twitter/twemoji) project.
-
 ## Configuration
+
+### Image Type
+
+Defaults to `svg`. To change to png, you need to supply `image_type` and
+`image_size` both:
 
 ```
 jekyll-twemoji:
   image_type: "png" # defaults to "svg"
+  image_size: "32x32" # defaults to "16x16"
 ```
 
-That's it. Enjoy! :heart_eyes:
+**image_type** can be: `"png"` or `"svg"` (default).
+**image_size** can be: `"16x16"` (default), `"16x16"` or `"72x72"`.
+
+That's it. :wink:
+
+## Attribution Requirements
+
+Please follow the [Attribution Requirements](https://github.com/twitter/twemoji#attribution-requirements) as stated on the official [Twemoji](https://github.com/twitter/twemoji) project.
 
 ## Contributing
 

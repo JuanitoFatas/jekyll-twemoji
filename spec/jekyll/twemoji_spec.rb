@@ -51,11 +51,16 @@ describe Jekyll::Twemoji do
     expect(emoji.image_type).to eq ".svg"
   end
 
+  it "image size by default is 16x16" do
+    expect(emoji.image_size).to eq "16x16"
+  end
+
   context "with a image type of png" do
     let(:image_type) { "png" }
+    let(:image_size) { "32x32" }
     let(:config_overrides) do
       {
-        "jekyll-twemoji" => { "image_type" => image_type }
+        "jekyll-twemoji" => { "image_type" => image_type, "image_size" => image_size }
       }
     end
 
@@ -67,7 +72,7 @@ describe Jekyll::Twemoji do
       expect(
         site.posts.first.content
       ).to eq(
-        "<img class='emoji' draggable='false' title=':thumbsup:' alt='👍' src='https://twemoji.maxcdn.com/16x16/1f44d.png'>"
+        "<img class='emoji' draggable='false' title=':thumbsup:' alt='👍' src='https://twemoji.maxcdn.com/32x32/1f44d.png'>"
       )
     end
   end

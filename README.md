@@ -47,7 +47,7 @@ jekyll-twemoji:
 ```
 
 - **image_type** can be: `"png"` or `"svg"` (default).
-- **image_size** can be: `"16x16"` (default), `"16x16"` or `"72x72"`.
+- **image_size** can be: `"16x16"` (default), `"32x32"` or `"72x72"`.
 
 That's it. :wink:
 

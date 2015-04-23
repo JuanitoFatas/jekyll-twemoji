@@ -1,7 +1,7 @@
 # Jekyll::Twemoji
 
-[![Build Status](https://img.shields.io/travis/JuanitoFatas/jekyll-twemoji.svg?style=flat-square)](https://travis-ci.org/JuanitoFatas/jekyll-twemoji)
 [![Gem Version](https://img.shields.io/gem/v/jekyll-twemoji.svg?style=flat-square)](https://rubygems.org/gems/jekyll-twemoji)
+[![Build Status](https://img.shields.io/travis/JuanitoFatas/jekyll-twemoji.svg?style=flat-square)](https://travis-ci.org/JuanitoFatas/jekyll-twemoji)
 
 Twemoji plugin for Jekyll in Pure Ruby. Powered by [Twemoji](https://github.com/jollygoodcode/twemoji).
 
@@ -57,7 +57,7 @@ Please follow the [Attribution Requirements](https://github.com/twitter/twemoji#
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/jekyll-twemoji/fork )
+1. Fork it ( https://github.com/JuanitoFatas/jekyll-twemoji/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

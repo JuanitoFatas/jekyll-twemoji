@@ -5,6 +5,8 @@
 
 Twemoji plugin for Jekyll in Pure Ruby. Powered by [Twemoji](https://github.com/jollygoodcode/twemoji).
 
+Note this Gem does not work on GitHub Pages. You need to make a feature request to GitHub to convince them include this gem by default on GitHub Pages.
+
 ## Installation
 
 Add this in your jekyll-powered site's `Gemfile`:

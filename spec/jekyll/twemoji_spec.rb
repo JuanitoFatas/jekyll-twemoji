@@ -6,7 +6,7 @@ describe Jekyll::Twemoji do
   let(:configs) do
     Jekyll.configuration(
       config_overrides.merge!({
-        "skip_config_files" => true,
+        "skip_config_files" => false,
         "collections" => {
           "docs" => { "output" => true },
           "secret" => {}
@@ -29,9 +29,12 @@ describe Jekyll::Twemoji do
     "<img class='emoji' draggable='false' title=':thumbsup:' alt='👍' src='https://twemoji.maxcdn.com/svg/1f44d.svg'>"
   end
 
+  let(:jekyll_v3?) { ::Jekyll::VERSION.to_f >= 3.0 }
+  let(:posts) { jekyll_v3? ? site.posts.docs : site.posts }
+
   before do
     site.read
-    (site.pages + site.posts + site.docs_to_write).each { |p| p.content.strip! }
+    (site.pages + posts + site.docs_to_write).each { |p| p.content.strip! }
     site.generate
   end
 
@@ -70,7 +73,7 @@ describe Jekyll::Twemoji do
 
     it "respects the new image type when emojifying" do
       expect(
-        site.posts.first.content
+        posts.first.content
       ).to eq(
         "<img class='emoji' draggable='false' title=':thumbsup:' alt='👍' src='https://twemoji.maxcdn.com/32x32/1f44d.png'>"
       )
@@ -78,7 +81,7 @@ describe Jekyll::Twemoji do
   end
 
   it "correctly replaces the emoji with the img in posts" do
-    expect(site.posts.first.content).to eq result
+    expect(posts.first.content).to eq result
   end
 
   it "correctly replaces the emoji with the img in pages" do

@@ -6,10 +6,8 @@ rvm:
   - 2.2
   - 2.1
   - 2.0.0
-  - 1.9.3
-  - jruby
+  - jruby-9.0.1.0
   - jruby-head
-  - jruby-9.0.0.0.pre1
   - rbx-2
   - ruby-head
 env:
@@ -17,10 +15,8 @@ env:
     - JRUBY_OPTS="-J-Xmx1024M --debug"
 matrix:
   allow_failures:
-    - rvm: 1.9.3
-    - rvm: jruby
+    - rvm: jruby-9.0.1.0
     - rvm: jruby-head
-    - rvm: jruby-9.0.0.0.pre1
     - rvm: rbx-2
     - rvm: ruby-head
   fast_finish: true

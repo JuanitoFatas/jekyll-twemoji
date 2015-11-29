@@ -7,9 +7,9 @@ rvm:
   - 2.1
   - 2.0.0
   - 1.9.3
-  - jruby
+  - jruby-1.7
+  - jruby-9.0.1.0
   - jruby-head
-  - jruby-9.0.0.0.pre1
   - rbx-2
   - ruby-head
 env:
@@ -18,9 +18,9 @@ env:
 matrix:
   allow_failures:
     - rvm: 1.9.3
-    - rvm: jruby
+    - rvm: jruby-1.7
+    - rvm: jruby-9.0.1.0
     - rvm: jruby-head
-    - rvm: jruby-9.0.0.0.pre1
     - rvm: rbx-2
     - rvm: ruby-head
   fast_finish: true

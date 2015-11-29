@@ -33,14 +33,18 @@ module Jekyll
     end
 
     def generate(site)
+      site.posts.each { |post| emojify post } unless jekyll_v3?
       site.pages.each { |page| emojify page }
-      site.posts.each { |post| emojify post }
       site.docs_to_write.each { |doc| emojify doc }
     end
 
     def emojify(page)
       page.content =
         ::Twemoji.parse(page.content, file_ext: image_type, image_size: image_size)
+    end
+
+    def jekyll_v3?
+      ::Jekyll::VERSION.to_f >= 3.0
     end
 
     private

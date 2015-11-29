@@ -12,6 +12,6 @@ Gem::Specification.new do |spec|
   spec.files         = ["lib/jekyll/twemoji.rb"]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "jekyll", "~> 2.0"
+  spec.add_dependency "jekyll", ">= 2.0"
   spec.add_dependency "twemoji", "~> 1.1.0"
 end

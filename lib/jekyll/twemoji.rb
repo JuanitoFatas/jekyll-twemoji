@@ -17,7 +17,7 @@ module Jekyll
     def image_type
       @image_type ||=
         if config_inquiry? "image_type"
-            validates_image_type(config["jekyll-twemoji"]["image_type"])
+          validates_image_type(config["jekyll-twemoji"]["image_type"])
         else
           ".svg"
         end
@@ -26,7 +26,7 @@ module Jekyll
     def image_size
       @image_size ||=
         if config_inquiry? "image_size"
-            validates_image_sizes(config["jekyll-twemoji"]["image_size"])
+          validates_image_sizes(config["jekyll-twemoji"]["image_size"])
         else
           "16x16"
         end

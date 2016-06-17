@@ -1,3 +1,3 @@
 ---
 ---
-:thumbsup: <a href="{{ page.url }}">{{ page.path }}</a>
+:+1: <a href="{{ page.url }}">{{ page.path }}</a>

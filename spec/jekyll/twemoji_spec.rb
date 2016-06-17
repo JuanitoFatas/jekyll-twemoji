@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Jekyll::Twemoji do
+RSpec.describe Jekyll::Twemoji do
   let(:config_overrides) { Hash(nil) }
 
   let(:configs) do
@@ -26,7 +26,7 @@ describe Jekyll::Twemoji do
   end
 
   let(:result) do
-    "<img class='emoji' draggable='false' title=':thumbsup:' alt='👍' src='https://twemoji.maxcdn.com/svg/1f44d.svg'>"
+    %(<img draggable="false" title=":+1:" alt="👍" src="https://twemoji.maxcdn.com/2/svg/1f44d.svg" class="emoji">)
   end
 
   let(:jekyll_v3?) { ::Jekyll::VERSION.to_f >= 3.0 }
@@ -51,31 +51,26 @@ describe Jekyll::Twemoji do
   end
 
   it "image type by default will suite what Twemoji expected" do
-    expect(emoji.image_type).to eq ".svg"
-  end
-
-  it "image size by default is 16x16" do
-    expect(emoji.image_size).to eq "16x16"
+    expect(emoji.image_type).to eq "svg"
   end
 
   context "with a image type of png" do
     let(:image_type) { "png" }
-    let(:image_size) { "32x32" }
     let(:config_overrides) do
       {
-        "jekyll-twemoji" => { "image_type" => image_type, "image_size" => image_size }
+        "jekyll-twemoji" => { "image_type" => image_type }
       }
     end
 
     it "fetches the custom image type from the config" do
-      expect(emoji.image_type).to eq ".#{image_type}"
+      expect(emoji.image_type).to eq image_type
     end
 
     it "respects the new image type when emojifying" do
       expect(
         posts.first.content
       ).to eq(
-        "<img class='emoji' draggable='false' title=':thumbsup:' alt='👍' src='https://twemoji.maxcdn.com/32x32/1f44d.png'>"
+        %(<img draggable="false" title=":+1:" alt="👍" src="https://twemoji.maxcdn.com/2/72x72/1f44d.png" class="emoji">)
       )
     end
   end
@@ -93,7 +88,7 @@ describe Jekyll::Twemoji do
   end
 
   it "not replace emoji if collection document won't output" do
-    expect(site.collections["secret"].docs.first.content).to eq ":thumbsup:\n"
+    expect(site.collections["secret"].docs.first.content).to eq ":+1:\n"
   end
 
   it "does not mangle liquid templates" do

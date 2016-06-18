@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-twemoji"
-  spec.version       = "1.1.0"
+  spec.version       = "3.0.0"
   spec.authors       = ["Juanito Fatas"]
   spec.email         = ["katehuang0320@gmail.com"]
   spec.summary       = %{Twemoji plugin for Jekyll in Pure Ruby.}
@@ -13,5 +13,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "jekyll", ">= 2.0"
-  spec.add_dependency "twemoji", "~> 1.1.0"
+  spec.add_dependency "twemoji", "~> 3.0"
 end
